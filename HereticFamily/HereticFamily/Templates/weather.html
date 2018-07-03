@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+        <div class="block1">
+        
+          <div class="weatherDiv">
+           <br>
+           <table class="weatherTable">
+           <col span="2" class="weatherCol" />
+             <tr class="weatherHeaderRow">
+                <th>Current</th>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><img src="{{IconLocation}}{{IconName}}.svg" class="weatherIcon">{{WeatherDescription|title}}</img></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Location: {{ObservationLocation_Full}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Temperature: {{Temp_String|floatformat:"0"}}&#x2109;</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Feels Like: {{Feels_Like|floatformat:"0"}}&#x2109;</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Wind: {{Wind_Speed}} mph From The {{Wind_Dir}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Relative Humidity: {{Humidity}}</span></td>
+             </tr>
+           </table>
+           <br>
+          </div>  
+          <br>
+          <div class="weatherDiv">
+           <table class="weatherTable">
+           <col span="4" class="weatherCol" />
+             <tr class="weatherHeaderRow">
+                <th>Today</th>
+                <th>Tomorrow</th>
+                <th>{{Date2}}</th>
+                <th>{{Date3}}</th>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><img src="{{IconLocation}}{{IconName0}}.svg" class="weatherIcon">{{IconName0|title}}</img></td>
+                <td><img src="{{IconLocation}}{{IconName1}}.svg" class="weatherIcon">{{IconName1|title}}</img></td>
+                <td><img src="{{IconLocation}}{{IconName2}}.svg" class="weatherIcon">{{IconName2|title}}</img></td>
+                <td><img src="{{IconLocation}}{{IconName3}}.svg" class="weatherIcon">{{IconName3|title}}</img></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Location: {{ObservationLocation_Full}}</span></td>
+                <td><span>Location: {{ObservationLocation_Full}}</span></td>
+                <td><span>Location: {{ObservationLocation_Full}}</span></td>
+                <td><span>Location: {{ObservationLocation_Full}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>High: {{Temp_High0}} &#x2109;</span></td>
+                <td><span>High: {{Temp_High1}} &#x2109;</span></td>
+                <td><span>High: {{Temp_High2}} &#x2109;</span></td>
+                <td><span>High: {{Temp_High3}} &#x2109;</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Low: {{Temp_Low0}} &#x2109;</span></td>
+                <td><span>Low: {{Temp_Low1}} &#x2109;</span></td>
+                <td><span>Low: {{Temp_Low2}} &#x2109;</span></td>
+                <td><span>Low: {{Temp_Low3}} &#x2109;</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Wind: {{Wind_Speed0}} mph From The {{Wind_Dir0}}</span></td>
+                <td><span>Wind: {{Wind_Speed1}} mph From The {{Wind_Dir1}}</span></td>
+                <td><span>Wind: {{Wind_Speed2}} mph From The {{Wind_Dir2}}</span></td>
+                <td><span>Wind: {{Wind_Speed3}} mph From The {{Wind_Dir3}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Average Humidity: {{Humidity0}}</span></td>
+                <td><span>Average Humidity: {{Humidity1}}</span></td>
+                <td><span>Average Humidity: {{Humidity2}}</span></td>
+                <td><span>Average Humidity: {{Humidity3}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Precipitation: {{QPFAllDay0}} in</span></td>
+                <td><span>Precipitation: {{QPFAllDay1}} in</span></td>
+                <td><span>Precipitation: {{QPFAllDay2}} in</span></td>
+                <td><span>Precipitation: {{QPFAllDay3}} in</span></td>
+             </tr>
+           </table>  
+           <br> 
+          </div>        
+        </div>
+
+
+{% endblock %}

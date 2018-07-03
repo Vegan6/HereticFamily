@@ -1,0 +1,257 @@
+.tasks {
+  width: 80%;
+  background: var(--main-color);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tasks-header {
+  color: var(--font-color);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+  /*height: 4em;*/
+  transition: 0.4s;
+  font-size: 3em;
+  background: #f0f1f2;
+  border-bottom: 1px solid var(--main-color);
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, var(--secondary-color), var(--main-color));
+  background-image: -moz-linear-gradient(top, var(--secondary-color), var(--main-color));
+  background-image: -o-linear-gradient(top, var(--secondary-color), var(--main-color));
+  background-image: linear-gradient(to bottom, var(--secondary-color), var(--main-color));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(0, 0, 0, 0.03);
+  overflow-y: auto;
+}
+
+.tasks-header:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 0.8em;
+    color: #777;
+    float: right;
+    /*margin-left: 5px;*/
+}
+
+.tasks-header:hover {
+    cursor: pointer;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.tasks-list {
+	transition: max-height 0.2s ease-out;
+	max-height: 0;
+  overflow: hidden;
+}
+
+.tasks-list-item {
+  display: block;
+  line-height: 1em;
+  padding: 12px 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: -webkit-left;
+  text-align: -moz-left;
+  text-align: left;
+}
+.tasks-list-item + .tasks-list-item {
+  border-top: 1px solid #f0f2f3;
+}
+
+.tasks-list-cb {
+  display: none;
+}
+
+.tasks-list-mark {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: .5em;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #c4cbd2;
+  border-radius: 12px;
+}
+.tasks-list-mark:before {
+  content: '';
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -6px;
+  height: 4px;
+  width: 8px;
+  border: solid #39ca74;
+  border-width: 0 0 4px 4px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.tasks-list-cb:checked ~ .tasks-list-mark {
+  border-color: #39ca74;
+}
+.tasks-list-cb:checked ~ .tasks-list-mark:before {
+  display: block;
+}
+
+.tasks-list-name {
+  font-weight: bold;
+  color: var(--font-color);
+}
+
+.tasks-list-info {
+	font-style: italic;
+	font-size: 0.6em;
+  color: var(--font-color);
+}
+
+.tasks-list-desc {
+  color: #CECECE;
+}
+.tasks-list-cb:checked ~ .tasks-list-desc {
+  color: #34bf6e;
+  text-decoration: line-through;
+}
+
+
+/*Add Button Task*/
+.cssCircle {
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  behavior: url(PIE.htc);
+  
+  width: 13px;
+  height: 13px;
+  padding: 0px;
+  display: inline-block;
+  
+  background: #779BCA;
+  border: 1px solid #003580;
+  color: #003580;
+  text-align: center;
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -ms-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+  transition: color 0.2s linear;  
+  font: 13px Arial, sans-serif
+}
+
+.cssCircle:hover,
+.addTaskBtn:hover {
+  background: #3F69A0 ;
+  cursor: pointer;
+}
+
+.minusSign:hover,
+.plusSign:hover,
+.addTaskBtn:hover {
+  color: white;
+}
+
+#overlay .minusSign {
+	width: 13px;
+	top: 0px;
+	padding: 0px;
+}
+
+.addTaskBtn {
+	display: inline-block;
+	color: var(--secondary-color);
+	margin-left: 80%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/*Add task pop up*/
+#overlay.hide {
+     visibility: hidden;
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     opacity: 0;
+     transition: opacity 0.2s linear;
+     -webkit-transition: opacity 0.2s linear;
+     -moz-transition: opacity 0.2s linear;
+     -o-transition: opacity 0.2s linear;
+}
+
+#overlay.show {
+     visibility: visible;
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     opacity: 1;
+     transition: opacity 0.2s linear;
+     -webkit-transition: opacity 0.2s linear;
+     -moz-transition: opacity 0.2s linear;
+     -o-transition: opacity 0.2s linear;
+}
+
+/*mobile margin needs to change*/
+#overlay div.addTask {
+     overflow-x: auto;
+     border-radius: 25px;
+     background-color: var(--main-color);
+     color: var(--font-color);
+     border:1px solid var(--secondary-color);
+     text-align: left;
+}
+form.addTaskForm {
+	width: 50%;
+	padding: 3px;
+}
+
+input.formButton {
+  color: white; 
+  background-color: black; 
+}
+
+@media (min-width: 48em) {
+	#overlay div.addTask {
+     width:50%;
+     min-width: 300px;
+     margin: 10% 25% auto 25%;
+     padding:15px;
+  }
+  
+  input.formButton {
+	  width: 25%;
+  }
+  
+  input.reset {
+    float: right;
+  }
+}
+
+@media (max-width: 48em) {
+	#overlay div.addTask {
+     margin: 10% 0% auto 0%;     
+     padding:15px;
+  }
+  
+  input.formButton {
+    width: 100%;
+  }
+  
+  .tasks-header {
+    height: auto;
+  }
+}
+

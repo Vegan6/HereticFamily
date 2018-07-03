@@ -1,0 +1,292 @@
+/*#region Blizzard Fonts*/
+@font-face {
+    font-family: "Devils Snare";
+    src: url("/static/Fonts/devilssnare.ttf");
+    src: 
+      url("/static/Fonts/devilssnare.ttf") format("truetype"),
+      url("/static/Fonts/devilssnare.woff") format("woff");
+}
+
+/*#endregion*/
+html {
+	background-color: var(--main-color);
+	font-family: var(--font-family), 'Arial Black', 'Serif';
+  font-size: var(--font-size);
+  color: var(--font-color);
+}
+
+body {
+    height: 100%;
+    width:100%;
+    /*min-width: 1280px;*/
+    min-height: 1080px;
+    background-color: var(--main-color);
+    margin:0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*#region Header */
+header {
+    top: 0;
+    /*position: fixed;*/
+    width: 100%;
+    /*height: 6em;*/
+    /*border-bottom: 1px solid white;*/
+    background-color: var(--main-color);
+    z-index:1000;
+    color: var(--font-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+p.header{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--font-color);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+header.header {
+    /*background-image: url(/static/banner.jpg);*/
+    /*background-size: 100%;
+    background-repeat: no-repeat;*/
+    color: var(--font-color);
+    background-color: var(--main-color);
+    width: 100%;
+}
+
+/*#endregion */
+
+/*#region Main Body */
+.mainBody{
+    margin: auto;
+    /*shrink margin on 48em window width*/
+    margin-left: 12em;
+    /*margin-top: 3em;*/
+    display: inline-block;
+    height: 100%;  
+    min-height: 1080px;
+    /*increase width on 48em window width*/  
+    width: calc(100% - 12em);
+    overflow: hidden;
+    background-image: var(--bg-image), url(/static/Images/Background.jpg);
+    background-color: var(--main-color);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content {
+    text-align:-webkit-center;
+    text-align: -moz-center;
+    color: var(--font-color);
+    background-color: inherit;
+}
+/*#endregion */
+
+/* Set padding to keep content from hitting the edges */
+.block1 {
+    padding-right: 15px;
+    height: 20%;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--font-color);
+}
+
+.block2 {
+    padding-right: 15px;
+    height: 20%;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--font-color);
+}
+
+.block3 {
+    padding-right: 15px;
+    height: 20%;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--font-color);
+}
+
+.block4 {
+    padding-right: 15px;
+    height: 20%;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--font-color);
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 780px;
+    width: 100%;
+    margin: 6px;
+}
+
+#login input,
+#login select,
+#login label,
+#login textarea {
+    max-width: 780px;
+    width: auto;
+    margin: 6px;
+}
+
+/* Below is used to stop chromes autofill color change*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px black inset;
+    -webkit-text-fill-color: white !important;
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+/*#region Scroll bar*/
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(105,105,105,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(105,105,105,0.6);
+}
+/*#endregion*/
+
+/*#region Footer */
+footer{
+    margin-bottom: 0;
+    /*width: calc(100% - 150px);*/
+    color: white;
+    margin-left: 12em;
+    border-top: 2px solid var(--secondary-color);
+    background-color: var(--main-color);
+}
+/*#endregion
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/**/
+.tooltip .tooltiptext {
+    top: -5px;
+    right: 105%;
+}
+
+div.error {
+    color:white;
+    padding:3em;
+    background-color:var(--main-color);
+    opacity:0.8;
+}
+
+/* Select Options */
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   font-size: inherit;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+select {
+   background-color: #222222;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   padding-left: 15px;
+}
+
+html.inactive {
+	-webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+html .mainMenu .menuButton {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+

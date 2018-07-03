@@ -1,0 +1,482 @@
+
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "forecast": 1
+  ,
+  "conditions": 1
+  }
+  }
+  , "current_observation": {
+    "image": {
+    "url":"http://icons.wxug.com/graphics/wu2/logo_130x80.png",
+    "title":"Weather Underground",
+    "link":"http://www.wunderground.com"
+    },
+    "display_location": {
+    "full":"Idaho Falls, ID",
+    "city":"Idaho Falls",
+    "state":"ID",
+    "state_name":"Idaho",
+    "country":"US",
+    "country_iso3166":"US",
+    "zip":"83404",
+    "magic":"1",
+    "wmo":"99999",
+    "latitude":"43.47000122",
+    "longitude":"-112.01000214",
+    "elevation":"1437.1"
+    },
+    "observation_location": {
+    "full":"Shamrock park, Idaho Falls, Idaho",
+    "city":"Shamrock park, Idaho Falls",
+    "state":"Idaho",
+    "country":"US",
+    "country_iso3166":"US",
+    "latitude":"43.474545",
+    "longitude":"-112.007980",
+    "elevation":"4688 ft"
+    },
+    "estimated": {
+    },
+    "station_id":"KIDIDAHO70",
+    "observation_time":"Last Updated on January 15, 7:49 PM MST",
+    "observation_time_rfc822":"Mon, 15 Jan 2018 19:49:06 -0700",
+    "observation_epoch":"1516070946",
+    "local_time_rfc822":"Mon, 15 Jan 2018 19:49:09 -0700",
+    "local_epoch":"1516070949",
+    "local_tz_short":"MST",
+    "local_tz_long":"America/Denver",
+    "local_tz_offset":"-0700",
+    "weather":"Clear",
+    "temperature_string":"25.3 F (-3.7 C)",
+    "temp_f":25.3,
+    "temp_c":-3.7,
+    "relative_humidity":"91%",
+    "wind_string":"Calm",
+    "wind_dir":"NE",
+    "wind_degrees":35,
+    "wind_mph":0.0,
+    "wind_gust_mph":0,
+    "wind_kph":0,
+    "wind_gust_kph":0,
+    "pressure_mb":"1031",
+    "pressure_in":"30.45",
+    "pressure_trend":"0",
+    "dewpoint_string":"23 F (-5 C)",
+    "dewpoint_f":23,
+    "dewpoint_c":-5,
+    "heat_index_string":"NA",
+    "heat_index_f":"NA",
+    "heat_index_c":"NA",
+    "windchill_string":"25 F (-4 C)",
+    "windchill_f":"25",
+    "windchill_c":"-4",
+    "feelslike_string":"25 F (-4 C)",
+    "feelslike_f":"25",
+    "feelslike_c":"-4",
+    "visibility_mi":"10.0",
+    "visibility_km":"16.1",
+    "solarradiation":"0",
+    "UV":"0.0","precip_1hr_string":"0.00 in ( 0 mm)",
+    "precip_1hr_in":"0.00",
+    "precip_1hr_metric":" 0",
+    "precip_today_string":"0.00 in (0 mm)",
+    "precip_today_in":"0.00",
+    "precip_today_metric":"0",
+    "icon":"clear",
+    "icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+    "forecast_url":"http://www.wunderground.com/US/ID/Idaho_Falls.html",
+    "history_url":"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KIDIDAHO70",
+    "ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=43.474545,-112.007980",
+    "nowcast":""
+  }
+    ,
+  "forecast":{
+    "txt_forecast": {
+    "date":"6:19 PM MST",
+    "forecastday": [
+    {
+    "period":0,
+    "icon":"clear",
+    "icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+    "title":"Monday",
+    "fcttext":"Clear. Lows overnight in the upper teens.",
+    "fcttext_metric":"A few clouds. Low -8C.",
+    "pop":"10"
+    }
+    ,
+    {
+    "period":1,
+    "icon":"nt_clear",
+    "icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+    "title":"Monday Night",
+    "fcttext":"Clear skies. Low 17F. Winds ESE at 5 to 10 mph.",
+    "fcttext_metric":"Mostly clear. Low -8C. Winds ENE at 10 to 15 km/h.",
+    "pop":"10"
+    }
+    ,
+    {
+    "period":2,
+    "icon":"clear",
+    "icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+    "title":"Tuesday",
+    "fcttext":"Mainly sunny. High 37F. Winds light and variable.",
+    "fcttext_metric":"A mainly sunny sky. High 3C. Winds light and variable.",
+    "pop":"0"
+    }
+    ,
+    {
+    "period":3,
+    "icon":"nt_partlycloudy",
+    "icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+    "title":"Tuesday Night",
+    "fcttext":"Partly cloudy skies. Low around 20F. Winds light and variable.",
+    "fcttext_metric":"A few clouds. Low -7C. Winds light and variable.",
+    "pop":"10"
+    }
+    ,
+    {
+    "period":4,
+    "icon":"partlycloudy",
+    "icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+    "title":"Wednesday",
+    "fcttext":"Partly to mostly cloudy. High 38F. Winds light and variable.",
+    "fcttext_metric":"Some sun in the morning with increasing clouds during the afternoon. High 3C. Winds light and variable.",
+    "pop":"10"
+    }
+    ,
+    {
+    "period":5,
+    "icon":"nt_partlycloudy",
+    "icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+    "title":"Wednesday Night",
+    "fcttext":"Mostly cloudy skies early, then partly cloudy after midnight. Low 28F. Winds SE at 5 to 10 mph.",
+    "fcttext_metric":"Mostly cloudy skies early will become partly cloudy late. Low -2C. Winds light and variable.",
+    "pop":"20"
+    }
+    ,
+    {
+    "period":6,
+    "icon":"cloudy",
+    "icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+    "title":"Thursday",
+    "fcttext":"Cloudy. High around 45F. Winds S at 10 to 15 mph.",
+    "fcttext_metric":"Cloudy. High 7C. Winds S at 15 to 25 km/h.",
+    "pop":"10"
+    }
+    ,
+    {
+    "period":7,
+    "icon":"nt_snow",
+    "icon_url":"http://icons.wxug.com/i/c/k/nt_snow.gif",
+    "title":"Thursday Night",
+    "fcttext":"Rain with some snow mixing in late. Low 32F. Winds SSW at 15 to 25 mph. Chance of precip 90%.",
+    "fcttext_metric":"Rain...mixing with snow late. Low around 0C. Winds SSW at 25 to 40 km/h. Chance of precip 90%.",
+    "pop":"90"
+    }
+    ]
+    },
+    "simpleforecast": {
+    "forecastday": [
+    {"date":{
+  "epoch":"1516068000",
+  "pretty":"7:00 PM MST on January 15, 2018",
+  "day":15,
+  "month":1,
+  "year":2018,
+  "yday":14,
+  "hour":19,
+  "min":"00",
+  "sec":0,
+  "isdst":"0",
+  "monthname":"January",
+  "monthname_short":"Jan",
+  "weekday_short":"Mon",
+  "weekday":"Monday",
+  "ampm":"PM",
+  "tz_short":"MST",
+  "tz_long":"America/Denver"
+},
+    "period":1,
+    "high": {
+    "fahrenheit":"41",
+    "celsius":"5"
+    },
+    "low": {
+    "fahrenheit":"17",
+    "celsius":"-8"
+    },
+    "conditions":"Clear",
+    "icon":"clear",
+    "icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+    "skyicon":"",
+    "pop":10,
+    "qpf_allday": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "qpf_day": {
+    "in": null,
+    "mm": null
+    },
+    "qpf_night": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "snow_allday": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "snow_day": {
+    "in": null,
+    "cm": null
+    },
+    "snow_night": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "maxwind": {
+    "mph": 8,
+    "kph": 13,
+    "dir": "",
+    "degrees": 0
+    },
+    "avewind": {
+    "mph": 0,
+    "kph": 0,
+    "dir": "North",
+    "degrees": 357
+    },
+    "avehumidity": 84,
+    "maxhumidity": 0,
+    "minhumidity": 0
+    }
+    ,
+    {"date":{
+  "epoch":"1516154400",
+  "pretty":"7:00 PM MST on January 16, 2018",
+  "day":16,
+  "month":1,
+  "year":2018,
+  "yday":15,
+  "hour":19,
+  "min":"00",
+  "sec":0,
+  "isdst":"0",
+  "monthname":"January",
+  "monthname_short":"Jan",
+  "weekday_short":"Tue",
+  "weekday":"Tuesday",
+  "ampm":"PM",
+  "tz_short":"MST",
+  "tz_long":"America/Denver"
+},
+    "period":2,
+    "high": {
+    "fahrenheit":"37",
+    "celsius":"3"
+    },
+    "low": {
+    "fahrenheit":"20",
+    "celsius":"-7"
+    },
+    "conditions":"Clear",
+    "icon":"clear",
+    "icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+    "skyicon":"",
+    "pop":0,
+    "qpf_allday": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "qpf_day": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "qpf_night": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "snow_allday": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "snow_day": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "snow_night": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "maxwind": {
+    "mph": 10,
+    "kph": 16,
+    "dir": "N",
+    "degrees": 3
+    },
+    "avewind": {
+    "mph": 5,
+    "kph": 8,
+    "dir": "N",
+    "degrees": 3
+    },
+    "avehumidity": 66,
+    "maxhumidity": 0,
+    "minhumidity": 0
+    }
+    ,
+    {"date":{
+  "epoch":"1516240800",
+  "pretty":"7:00 PM MST on January 17, 2018",
+  "day":17,
+  "month":1,
+  "year":2018,
+  "yday":16,
+  "hour":19,
+  "min":"00",
+  "sec":0,
+  "isdst":"0",
+  "monthname":"January",
+  "monthname_short":"Jan",
+  "weekday_short":"Wed",
+  "weekday":"Wednesday",
+  "ampm":"PM",
+  "tz_short":"MST",
+  "tz_long":"America/Denver"
+},
+    "period":3,
+    "high": {
+    "fahrenheit":"38",
+    "celsius":"3"
+    },
+    "low": {
+    "fahrenheit":"28",
+    "celsius":"-2"
+    },
+    "conditions":"Partly Cloudy",
+    "icon":"partlycloudy",
+    "icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+    "skyicon":"",
+    "pop":10,
+    "qpf_allday": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "qpf_day": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "qpf_night": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "snow_allday": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "snow_day": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "snow_night": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "maxwind": {
+    "mph": 5,
+    "kph": 8,
+    "dir": "NNE",
+    "degrees": 20
+    },
+    "avewind": {
+    "mph": 4,
+    "kph": 6,
+    "dir": "NNE",
+    "degrees": 20
+    },
+    "avehumidity": 77,
+    "maxhumidity": 0,
+    "minhumidity": 0
+    }
+    ,
+    {"date":{
+  "epoch":"1516327200",
+  "pretty":"7:00 PM MST on January 18, 2018",
+  "day":18,
+  "month":1,
+  "year":2018,
+  "yday":17,
+  "hour":19,
+  "min":"00",
+  "sec":0,
+  "isdst":"0",
+  "monthname":"January",
+  "monthname_short":"Jan",
+  "weekday_short":"Thu",
+  "weekday":"Thursday",
+  "ampm":"PM",
+  "tz_short":"MST",
+  "tz_long":"America/Denver"
+},
+    "period":4,
+    "high": {
+    "fahrenheit":"45",
+    "celsius":"7"
+    },
+    "low": {
+    "fahrenheit":"32",
+    "celsius":"0"
+    },
+    "conditions":"Overcast",
+    "icon":"cloudy",
+    "icon_url":"http://icons.wxug.com/i/c/k/cloudy.gif",
+    "skyicon":"",
+    "pop":10,
+    "qpf_allday": {
+    "in": 0.22,
+    "mm": 6
+    },
+    "qpf_day": {
+    "in": 0.00,
+    "mm": 0
+    },
+    "qpf_night": {
+    "in": 0.22,
+    "mm": 6
+    },
+    "snow_allday": {
+    "in": 0.3,
+    "cm": 0.8
+    },
+    "snow_day": {
+    "in": 0.0,
+    "cm": 0.0
+    },
+    "snow_night": {
+    "in": 0.3,
+    "cm": 0.8
+    },
+    "maxwind": {
+    "mph": 15,
+    "kph": 24,
+    "dir": "S",
+    "degrees": 183
+    },
+    "avewind": {
+    "mph": 11,
+    "kph": 18,
+    "dir": "S",
+    "degrees": 183
+    },
+    "avehumidity": 73,
+    "maxhumidity": 0,
+    "minhumidity": 0
+    }
+    ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="tasks">
+    <!-- Add Task -->
+	<div class="addTaskBtn" onclick='overlay()'>
+		<div class="cssCircle plusSign">
+		  &#43; 
+		</div>
+		<span>Add Task</span>
+	</div>
+	
+	<div id="overlay" class="hide">
+      <div class="addTask">
+        <div class="cssCircle minusSign" onclick='overlay()'>
+	      &#8211;
+	    </div>
+        <form action="/tasks" method="post" id="addTaskForm" class="addTaskForm">
+            {% csrf_token %}
+            Task Name:<br>
+            <input type="text" name="taskName" required autofocus maxlength="128"><br>
+            Task Description:<br>
+            <textarea id="area" form="addTaskForm" name="taskDescr" required maxlength="2048" rows="3" wrap="soft"></textarea><br>
+            Assign To:<br>
+            <select name="assignedTo" required>
+                <option disabled selected value> -- Select An Option -- </option>
+                {% for user in Users %}
+                <option value="{{user.id}}">{{user.first_name| title}} {{user.last_name| title}}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="Add Task" name="addTask" class="formButton"/>
+            <input type="reset" class="formButton reset">
+        </form>
+      </div>
+	</div>
+	
+	<!-- Assigned Tasks -->
+    <header class="tasks-header">
+      My Tasks      
+    </header>
+    <fieldset class="tasks-list">
+      {% csrf_token %}
+      {% for task in Tasks %}
+      <label class="tasks-list-item">
+        <input type="checkbox" id="{{ task.taskid }}" value="{% if task.completed %}1{% else %}0{% endif %}" 
+        class="tasks-list-cb" {% if task.completed %}checked{% endif %} onchange="UpdateTask(event)">
+        <span class="tasks-list-mark"></span>
+        <span class="tasks-list-name">{{ task.taskname | title }}</span>
+        <span class="tasks-list-desc"> - {{ task.taskdesc }}</span>
+        <div>
+	        <span class="tasks-list-info">Created by: {{ task.createdby|title }}</span>
+	        <span class="tasks-list-info">{{ task.taskcreateddate }}</span>
+        </div>
+      </label>
+      {% endfor %}
+    </fieldset>
+    <br>
+    <!-- Created Tasks last 30 -->
+    <header class="tasks-header">
+      Tasks Created by {{ User.first_name | title }}
+    </header>
+    <fieldset class="tasks-list">
+      {% csrf_token %}
+      {% for task in TasksMe %}
+      <label class="tasks-list-item">
+        <input type="checkbox" id="{{ task.taskid }}" value="{% if task.completed %}1{% else %}0{% endif %}" 
+        class="tasks-list-cb" {% if task.completed %}checked{% endif %} onchange="UpdateTask(event)">
+        <span class="tasks-list-mark"></span>
+        <span class="tasks-list-name">{{ task.taskname | title }}</span>
+        <span class="tasks-list-desc"> - {{ task.taskdesc }}</span>
+        <div>
+            <span class="tasks-list-info">Assigned To: {{ task.assignedto|title }}</span>
+            <span class="tasks-list-info">{{ task.taskcreateddate }}</span>
+        </div>
+      </label>
+      {% endfor %}
+    </fieldset>
+  </section>
+  
+  <script>
+    var acc = document.getElementsByClassName("tasks-header");
+	var i;
+	
+	for (i = 0; i < acc.length; i++) {
+	    acc[i].addEventListener("click", function() {
+	        /* Toggle between adding and removing the "active" class,
+	        to highlight the button that controls the panel */
+	        this.classList.toggle("active");
+	
+	        /* Toggle between hiding and showing the active panel */
+	        var panel = this.nextElementSibling;
+	        if (panel.style.maxHeight){
+		      panel.style.maxHeight = null;
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		    } 
+	    });
+	} 
+  </script>
+  
+{% endblock %}

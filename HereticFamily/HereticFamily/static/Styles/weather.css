@@ -1,0 +1,38 @@
+.weatherDiv {
+	overflow-x: auto;
+	border-bottom: var(--secondary-color) solid 2px;
+}
+
+.weatherTable {
+	border-collapse: collapse; 
+	width: 95%;
+	white-space: nowrap;	
+}
+
+.weatherHeaderRow {
+	text-align: left;
+}
+
+.weatherIcon {
+	vertical-align: middle; 
+	padding-right:20px;
+	height: 33px;
+}
+
+.weatherDataRow {
+	font-size: 0.75em;
+	vertical-align: middle;
+}
+
+.weatherCol .weatherColSmall {
+	border: 2px solid var(--font-color); 
+	width: 25%;
+	visibility: unset;
+}
+
+@media all and (max-width:768px) {
+	col.weatherColSmall {
+	  visibility: collapse;
+	}
+  
+}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+        <div class="block1">
+        
+          <div class="weatherDiv">
+           <table class="weatherTable">
+           <col span="2" class="weatherCol" />
+             <tr class="weatherHeaderRow">
+                <th>Current</th>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><img src="/static/Images/weather/icons/white/{{IconName}}.svg" class="weatherIcon">{{IconName|title}}</img></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Location: {{ObservationLocation_Full}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Temperature: {{Temp_String}}&#x2109</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Feels Like: {{Feels_Like}}&#x2109</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Wind: {{Wind_Speed}} mph From The {{Wind_Dir}}</span></td>
+             </tr>
+             <tr class="weatherDataRow">
+                <td><span>Relative Humidity: {{Humidity}}</span></td>
+             </tr>
+           </table>   
+          </div>  
+        </div>
+	    <div class="block1">
+	       {% autoescape off %}{{Block1}}{% endautoescape %}
+	       
+	    </div>
+	    <div class="block2">
+           {% autoescape off %}{{Block2}}{% endautoescape %}
+           
+        </div>
+        <div class="block3">
+           {% autoescape off %}{{Block3}}{% endautoescape %}
+        </div>
+        <div class="block4">
+           {% autoescape off %}{{Block4}}{% endautoescape %}
+        </div>
+
+
+{% endblock %}
