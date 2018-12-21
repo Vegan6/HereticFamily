@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 #Weather Underground key 892a7ac61426b970
 #https://www.wunderground.com/weather/api/d/docs
 from os import path
-from django.conf.global_settings import MIDDLEWARE_CLASSES
+#from django.conf.global_settings import MIDDLEWARE_CLASSES
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = path.dirname(path.abspath(path.dirname(__file__)))
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'HereticFamily'
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

@@ -4,8 +4,8 @@ import decimal
 
 # Static Variables
 WU_STATE = 'ID'
-WU_CITY = 'KIDA'
-WU_StationID = 'KIDA'
+WU_CITY = 'Idaho_Falls'
+WU_StationID = 'KIDIDAHO70'
 #Idaho_Falls, KIDA, 83404
 
 # Heretic Key

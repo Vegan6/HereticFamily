@@ -48,29 +48,29 @@
                 <a class="menuHeading" href="#">User Not Logged In</a>
             {% endif %}
 
-            <ul class="menuList">               
-               {% if user.is_authenticated %}
-	               <li class="menuItem">&alpha; <a href="/" class="menuLink">Home</a></li>
-	               <li class="menuItem">&chi; <a href="/weather" class="menuLink">Weather</a></li>
-	               <li class="menuItem">&Phi; <a href="/tasks" class="menuLink">Task List</a></li>
-	               <li class="menuItem">&Sigma; <a href="#" class="menuLink">Calendar</a></li>
-	               <li class="menuItem">&Psi; <a href="#" class="menuLink">Meal Plan</a></li>
-	               <li class="menuItem">&Omega; <a href="#" class="menuLink">Recipes</a></li>
-	               <li class="menuItem">&gamma; <a href="#" class="menuLink">Inventory</a></li>
-	               <li class="menuItem">&delta; <a href="#" class="menuLink">Chores</a></li>
-	               <li class="menuItem">&epsilon; <a href="#" class="menuLink">Calculators</a></li>	               
-	
-	               <li class="menuItem menuIitemDivided menuSelected">
-	                  <a href="#" class="menuLink">Services</a>
-	               </li>
-	
-	               <li class="menuItem"><a href="#" class="menuLink">Contact</a></li>
-				   <li class="menuHeading">User: {{ user.get_username|title }}</li>
-				   <li class="menuItem"><a href="#" class="menuLink">User Settings</a></li>
-				   <li class="menuItem"><a href="{% url 'logout'%}?next={{request.path}}" class="menuLink">Logout</a></li>
-			   {% else %}
-			     <li class="menuItem"><a href="{% url 'login'%}?next=/" class="menuLink">Login</a></li>   
-			   {% endif %} 
+            <ul class="menuList">
+			{% if user.is_authenticated %}
+                <li class="menuItem">&alpha; <a href="/" class="menuLink">Home</a></li>
+				<li class="menuItem">&chi; <a href="/weather" class="menuLink">Weather</a></li>
+				<li class="menuItem">&Phi; <a href="/tasks" class="menuLink">Task List</a></li>
+				<li class="menuItem">&Sigma; <a href="#" class="menuLink">Calendar</a></li>
+				<li class="menuItem">&Psi; <a href="#" class="menuLink">Meal Plan</a></li>
+				<li class="menuItem">&Omega; <a href="#" class="menuLink">Recipes</a></li>
+				<li class="menuItem">&gamma; <a href="#" class="menuLink">Inventory</a></li>
+				<li class="menuItem">&delta; <a href="#" class="menuLink">Chores</a></li>
+				<li class="menuItem">&epsilon; <a href="#" class="menuLink">Calculators</a></li>	               
+				
+				<li class="menuItem menuIitemDivided menuSelected">
+				<a href="#" class="menuLink">Services</a>
+				</li>
+				
+				<li class="menuItem"><a href="#" class="menuLink">Contact</a></li>
+				<li class="menuHeading">User: {{ user.get_username|title }}</li>
+				<li class="menuItem"><a href="#" class="menuLink">User Settings</a></li>
+				<li class="menuItem"><a href="{% url 'logout'%}?next={{request.path}}" class="menuLink">Logout</a></li>
+			 {% else %}
+			     <li class="menuItem"><a href="{% url 'login'%}?next=/" class="menuLink">Login</a></li>
+			 {% endif %} 
             </ul>
         </div>
     </div>

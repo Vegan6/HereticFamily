@@ -7,7 +7,7 @@ import json
 #import logging
 #import os.path
 from . import helper
-from HereticFamily.AppCode.Objects import Weather
+from AppCode.Objects import Weather
 #http://api.wunderground.com/api/892a7ac61426b970/conditions/q/ID/Idaho_Falls.json
 #Forecast: http://api.wunderground.com/api/892a7ac61426b970/forecast/q/ID/Idaho_Falls.json
 #Zip Query: http://api.wunderground.com/api/892a7ac61426b970/conditions/q/ID/83404.json
@@ -15,6 +15,8 @@ from HereticFamily.AppCode.Objects import Weather
 def GetWeatherCurrent(State, City):
   # Also returns 3-day forecast
   url = "http://api.wunderground.com/api/%s/conditions/q/%s/%s.json" % (helper.WU_API_KEY, helper.WU_STATE, helper.WU_CITY)
+  #http://api.wunderground.com/api/892a7ac61426b970/conditions/q/KIDA.json
+  #http://api.wunderground.com/api/892a7ac61426b970/conditions/q/pws:KIDIDAHO70.json
   response = requests.get(url)
   response
   if response.status_code == 200:

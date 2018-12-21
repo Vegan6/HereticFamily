@@ -1,7 +1,7 @@
 import logging
-from HereticFamily.AppData import models
-from HereticFamily.AppCode import WeatherUndergroundAPI
-from HereticFamily.AppCode import helper
+from AppData import models
+from AppCode import WeatherUndergroundAPI
+from AppCode import helper
 from datetime import datetime, timedelta
 
 def GetCurrentWeather():
@@ -147,7 +147,10 @@ class CurrentWeather(dict):
 
     @property
     def WindChill(self):
-      return self.Current_Observation()['windchill_f']
+      windChill = self.Current_Observation()['windchill_f']
+      if (windChill == 'NA'):
+        windChill = '0'
+      return int(float())
 
     @property
     def WindChill_String(self):
@@ -167,7 +170,7 @@ class CurrentWeather(dict):
 
     @property
     def Wind_Speed_Gust(self):
-      return self.Current_Observation()['wind_gust_mph']
+      return int(float(self.Current_Observation()['wind_gust_mph']))
 
     @property
     def Wind_String(self):

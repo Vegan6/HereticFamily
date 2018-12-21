@@ -44,8 +44,8 @@ class FactTasklist(models.Model):
     taskcreateddate = models.DateField(db_column='TaskCreatedDate', blank=True, null=False)
     completed = Bit1BooleanField(db_column='Completed')
     completiondate = models.DateField(db_column='CompletionDate', blank=True, null=True)
-    createdby = models.ForeignKey('AuthUser', db_column='CreatedBy', related_name='task_createdby')
-    assignedto = models.ForeignKey('AuthUser', db_column='AssignedTo', blank=True, null=True, related_name='task_assignedto')
+    createdby = models.ForeignKey('AuthUser', db_column='CreatedBy', related_name='task_createdby', on_delete=models.CASCADE)
+    assignedto = models.ForeignKey('AuthUser', db_column='AssignedTo', blank=True, null=True, related_name='task_assignedto', on_delete=models.CASCADE)
 
     class Meta:
         managed = False
@@ -68,7 +68,7 @@ class FactWeathercurrent(models.Model):
     pressurein = models.DecimalField(db_column='PressureIN', max_digits=6, decimal_places=2, blank=True, null=True)
     dewpoint = models.SmallIntegerField(db_column='Dewpoint', blank=True, null=True)
     windchill = models.SmallIntegerField(db_column='WindChill', blank=True, null=True)
-    feelslike = models.SmallIntegerField(db_column='FeelsLike', blank=True, null=True)
+    feelslike = models.DecimalField(db_column='FeelsLike', max_digits=6, decimal_places=2, blank=True, null=True)
     visibilitymiles = models.DecimalField(db_column='VisibilityMiles', max_digits=10, decimal_places=2, blank=True, null=True)
     precipitationonehourin = models.DecimalField(db_column='PrecipitationOneHourIN', max_digits=10, decimal_places=2, blank=True, null=True)
     precipitationdayin = models.DecimalField(db_column='PrecipitationDayIN', max_digits=10, decimal_places=2, blank=True, null=True)
